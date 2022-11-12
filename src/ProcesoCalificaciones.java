@@ -1,0 +1,52 @@
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Scanner;
+
+public class ProcesoCalificaciones {
+
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce las calificaciones o * para salir ");
+        String datoPedidoPorPantalla = "";
+        String numeros = "";
+        while(!datoPedidoPorPantalla.equals("*")){
+            datoPedidoPorPantalla = scanner.next();
+            if(!datoPedidoPorPantalla.equals("*")){
+                numeros+=datoPedidoPorPantalla+",";
+            }
+            
+        }
+        
+        scanner.close();
+
+        ProcessBuilder processBuilder = new ProcessBuilder("java", "ComprobarCalificaciones", numeros);
+        processBuilder.directory(new File("./bin"));
+
+        try {
+            Process proceso= processBuilder.start();
+			InputStream inputStream=proceso.getInputStream();
+			int caracterParaLeer=0;
+			while((caracterParaLeer=inputStream.read())!=-1) {
+				System.out.print((char)caracterParaLeer);
+			}
+			inputStream.close();
+			
+			int valorSalida=proceso.waitFor();
+            System.out.println("El valos de salida es " +valorSalida);
+			if(valorSalida!=0) {
+				inputStream=proceso.getErrorStream();
+				while((caracterParaLeer=inputStream.read())!=-1) {
+					System.out.print((char)caracterParaLeer);
+				}
+				inputStream.close();
+			}
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch ProcesoParaIniciarPing",
+            "request": "launch",
+            "mainClass": "ProcesoParaIniciarPing",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ping",
+            "request": "launch",
+            "mainClass": "Ping",
+            "args": "www.google.com",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        },
+        {
+            "type": "java",
+            "name": "Launch PedirDatos",
+            "request": "launch",
+            "mainClass": "PedirDatos",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        },
+        {
+            "type": "java",
+            "name": "Launch ComprobarCalificaciones",
+            "request": "launch",
+            "mainClass": "ComprobarCalificaciones",
+            "args": "10,5,5",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProcesoParaPedirDatos",
+            "request": "launch",
+            "mainClass": "ProcesoParaPedirDatos",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProcesoCalificaciones",
+            "request": "launch",
+            "mainClass": "ProcesoCalificaciones",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch comprobarCalificaciones",
+            "request": "launch",
+            "mainClass": "comprobarCalificaciones",
+            "args": "10,4,10",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        }
+    ]
+}
