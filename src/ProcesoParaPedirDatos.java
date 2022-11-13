@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ProcesoParaPedirDatos {
 
-    public static Scanner scanner = new Scanner(System.in);
+    
 
     private static String nombre;
     private static String apellido;
@@ -15,12 +15,12 @@ public class ProcesoParaPedirDatos {
 
     private static int valorSalida;
 
-    public static void main(String[] args) {
+    public void proceso2(Scanner scanner) {
 
-        pedirNombre();
-        pedirApellido();
-        pedirYearNacimiento();
-        scanner.close();
+        pedirNombre(scanner);
+        pedirApellido(scanner);
+        pedirYearNacimiento(scanner);
+   
 
         ProcessBuilder processBuilder = new ProcessBuilder("java", "PedirDatos");
         processBuilder.directory(new File("./bin"));
@@ -71,19 +71,19 @@ public class ProcesoParaPedirDatos {
         }
     }
 
-    public static void pedirNombre() {
+    public static void pedirNombre(Scanner scanner) {
         System.out.println("Introduce tu nombre");
         nombre = scanner.next();
 
     }
 
-    public static void pedirApellido() {
+    public static void pedirApellido(Scanner scanner) {
         System.out.println("Introduce tu apellido");
         apellido = scanner.next();
 
     }
 
-    public static void pedirYearNacimiento() {
+    public static void pedirYearNacimiento(Scanner scanner) {
 
         System.out.println("Introduce tu año de nacimiento");
         year = scanner.next();

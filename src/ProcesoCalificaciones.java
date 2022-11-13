@@ -6,9 +6,9 @@ import java.util.Scanner;
 
 public class ProcesoCalificaciones {
 
-    
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+ 
+    public void procesoCalificaciones(Scanner scanner ) {
+   
         System.out.println("Introduce las calificaciones o * para salir ");
         String datoPedidoPorPantalla = "";
         String numeros = "";
@@ -19,8 +19,8 @@ public class ProcesoCalificaciones {
             }
             
         }
-        
-        scanner.close();
+
+
 
         ProcessBuilder processBuilder = new ProcessBuilder("java", "ComprobarCalificaciones", numeros);
         processBuilder.directory(new File("./bin"));
@@ -35,7 +35,7 @@ public class ProcesoCalificaciones {
 			inputStream.close();
 			
 			int valorSalida=proceso.waitFor();
-            System.out.println("El valos de salida es " +valorSalida);
+            System.out.println("El valor de salida es " +valorSalida);
 			if(valorSalida!=0) {
 				inputStream=proceso.getErrorStream();
 				while((caracterParaLeer=inputStream.read())!=-1) {
@@ -48,5 +48,7 @@ public class ProcesoCalificaciones {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+       
     }
+    
 }
