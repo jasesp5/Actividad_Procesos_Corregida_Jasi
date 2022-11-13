@@ -43,6 +43,7 @@ public class ProcesoParaIniciarPing {
 
         } catch (InputMismatchException e) {
             System.err.println("Tiene que introducir un número entero");
+            scanner.next();
 
         }
 

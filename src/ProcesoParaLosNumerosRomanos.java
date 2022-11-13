@@ -14,6 +14,7 @@ public class ProcesoParaLosNumerosRomanos {
          numeros  = scanner.nextInt();
         } catch (InputMismatchException e) {
             System.err.println("Por favor introduce enteros");
+            scanner.next();
         }
 
 
