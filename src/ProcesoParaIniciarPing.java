@@ -6,25 +6,23 @@ import java.util.Scanner;
 
 public class ProcesoParaIniciarPing {
 
-    public static Scanner scanner = new Scanner(System.in);
+  
 
     private static String dirrecion;
     private static int numeroDeVeces;
 
-    public static void main(String[] args) throws IOException {
+    public void proceso4(Scanner scanner) throws IOException {
 
-        pedirDirrecion();
-        pedirLaVecesQueElUsuarioQuiereElPing();
-        scanner.close();
-        for (int i = 0; i < numeroDeVeces; i++) {
-            iniciarProceso();
-        }
+        pedirDirrecion(scanner);
+        pedirLaVecesQueElUsuarioQuiereElPing(scanner);
+    
+     
         
         
 
     }
 
-    public static void pedirDirrecion() {
+    public static void pedirDirrecion(Scanner scanner) {
 
         try {
             System.out.println("Introduce la dirrección");
@@ -35,10 +33,13 @@ public class ProcesoParaIniciarPing {
 
     }
 
-    public static void pedirLaVecesQueElUsuarioQuiereElPing() {
+    public static void pedirLaVecesQueElUsuarioQuiereElPing(Scanner scanner) throws IOException {
         try {
             System.out.println("Introduce el número de veces que quieres realizar el ping");
             numeroDeVeces = scanner.nextInt();
+            for (int i = 0; i < numeroDeVeces; i++) {
+                iniciarProceso();
+            }
 
         } catch (InputMismatchException e) {
             System.err.println("Tiene que introducir un número entero");

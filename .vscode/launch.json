@@ -6,6 +6,28 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MenuPrincipal",
+            "request": "launch",
+            "mainClass": "MenuPrincipal",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProcesoParaLosNumerosRomanos",
+            "request": "launch",
+            "mainClass": "ProcesoParaLosNumerosRomanos",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        },
+        {
+            "type": "java",
+            "name": "Launch NumerosRomanos",
+            "request": "launch",
+            "mainClass": "NumerosRomanos",
+            "args": "1998",
+            "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
+        },
+        {
+            "type": "java",
             "name": "Launch ProcesoParaIniciarPing",
             "request": "launch",
             "mainClass": "ProcesoParaIniciarPing",
