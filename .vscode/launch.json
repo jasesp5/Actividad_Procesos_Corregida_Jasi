@@ -9,6 +9,13 @@
             "name": "Launch MenuPrincipal",
             "request": "launch",
             "mainClass": "MenuPrincipal",
+            "projectName": "Actividid_Eval_Procesos_Jassi_64a1d88d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MenuPrincipal",
+            "request": "launch",
+            "mainClass": "MenuPrincipal",
             "projectName": "Actividid_Eval_Procesos_Jassi_5cf271c1"
         },
         {

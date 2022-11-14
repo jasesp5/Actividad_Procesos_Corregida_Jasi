@@ -70,6 +70,7 @@ public class ProcesoParaIniciarPing {
 				}
 				inputStream.close();
 			}
+            proceso.destroy();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

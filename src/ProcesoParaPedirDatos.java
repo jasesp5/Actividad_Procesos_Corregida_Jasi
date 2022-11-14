@@ -69,6 +69,7 @@ public class ProcesoParaPedirDatos {
             }
             inputStream.close();
         }
+        proceso.destroy();
     }
 
     public static void pedirNombre(Scanner scanner) {

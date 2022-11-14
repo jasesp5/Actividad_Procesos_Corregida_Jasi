@@ -31,6 +31,7 @@ public class Ping {
                     }
                     imprimirError.close();
                 }
+                proceso.destroy();
                 System.out.println("El valor de salida es " + proceso.waitFor());
 
             } catch (IOException e) {
