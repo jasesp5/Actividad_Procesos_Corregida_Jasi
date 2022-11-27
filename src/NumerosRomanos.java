@@ -1,13 +1,19 @@
 
 public class NumerosRomanos {
-    
+
     public static void main(String[] args) {
-        if(Integer.valueOf(args[0])>3999 || Integer.valueOf(args[0])<0){
+        try {
+            if (Integer.valueOf(args[0]) > 3999 || Integer.valueOf(args[0]) < 0) {
+                System.err.println("Solo convertimos a romano números del 1 al 3999.");
+                System.exit(-1);
+            }
+            int numero = Integer.valueOf(args[0]);
+            System.out.println(enNumeroRomanos(numero));
+        } catch (NumberFormatException e) {
             System.err.println("Solo convertimos a romano números del 1 al 3999.");
             System.exit(-1);
         }
-       int numero = Integer.valueOf(args[0]);
-        System.out.println(enNumeroRomanos(numero));
+
     }
 
     public static String enNumeroRomanos(int numero) {

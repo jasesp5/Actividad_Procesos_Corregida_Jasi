@@ -7,20 +7,16 @@ import java.util.Scanner;
 
 public class ProcesoParaPedirDatos {
 
-    
-
     private static String nombre;
     private static String apellido;
     private static String year;
 
-    private static int valorSalida;
 
     public void proceso2(Scanner scanner) {
 
         pedirNombre(scanner);
         pedirApellido(scanner);
         pedirYearNacimiento(scanner);
-   
 
         ProcessBuilder processBuilder = new ProcessBuilder("java", "PedirDatos");
         processBuilder.directory(new File("./bin"));
@@ -56,13 +52,13 @@ public class ProcesoParaPedirDatos {
         InputStream inputStream = proceso.getInputStream();
         int caracterParaLeer = 0;
 
-        valorSalida = proceso.waitFor();
+        int valorSalida = proceso.waitFor();
         if (valorSalida == 0) {
-
+            System.out.println("El valor de salida es " + valorSalida);
         }
-        System.out.println("El valos de salida es " + valorSalida);
-        if (valorSalida != 0) {
 
+        if (valorSalida != 0) {
+          
             inputStream = proceso.getErrorStream();
             while ((caracterParaLeer = inputStream.read()) != -1) {
                 System.out.print((char) caracterParaLeer);

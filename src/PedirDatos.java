@@ -20,12 +20,12 @@ public class PedirDatos {
     }
 
     public static void pedirNombre() {
-
+        
         try {
             nombre = scanner.next();
         } catch (NullPointerException exception) {
             System.err.println("La información proporcionada no es correcta");
-            System.exit(1);
+            System.exit(-1);
         }
 
     }
@@ -37,7 +37,7 @@ public class PedirDatos {
 
         } catch (NullPointerException exception) {
             System.err.println("La información proporcionada no es correcta");
-            System.exit(1);
+            System.exit(-1);
         }
 
     }

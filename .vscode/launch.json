@@ -6,6 +6,28 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PedirDatos",
+            "request": "launch",
+            "mainClass": "PedirDatos",
+            "projectName": "Actividid_Eval_Procesos_Jassi_64a1d88d"
+        },
+        {
+            "type": "java",
+            "name": "Launch NumerosRomanos",
+            "request": "launch",
+            "mainClass": "NumerosRomanos",
+            "args": "dsafdsf",
+            "projectName": "Actividid_Eval_Procesos_Jassi_64a1d88d"
+        },
+        {
+            "type": "java",
+            "name": "Launch ComprobarCalificaciones",
+            "request": "launch",
+            "mainClass": "ComprobarCalificaciones",
+            "projectName": "Actividid_Eval_Procesos_Jassi_64a1d88d"
+        },
+        {
+            "type": "java",
             "name": "Launch MenuPrincipal",
             "request": "launch",
             "mainClass": "MenuPrincipal",
@@ -37,7 +59,7 @@
             "name": "Launch NumerosRomanos",
             "request": "launch",
             "mainClass": "NumerosRomanos",
-            "args": "1998",
+            "args": "1234",
             "projectName": "Actividad_Eval_Procesos_Jassi_30740395"
         },
         {

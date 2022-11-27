@@ -35,14 +35,16 @@ public class ProcesoCalificaciones {
 			inputStream.close();
 			
 			int valorSalida=proceso.waitFor();
-            System.out.println("El valor de salida es " +valorSalida);
+            
 			if(valorSalida!=0) {
 				inputStream=proceso.getErrorStream();
 				while((caracterParaLeer=inputStream.read())!=-1) {
 					System.out.print((char)caracterParaLeer);
 				}
 				inputStream.close();
-			}
+			}else{
+                System.out.println("El valor de salida es " +valorSalida);
+            }
             proceso.destroy();
         } catch (IOException e) {
             e.printStackTrace();

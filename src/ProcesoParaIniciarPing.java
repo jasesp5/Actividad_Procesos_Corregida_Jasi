@@ -6,8 +6,6 @@ import java.util.Scanner;
 
 public class ProcesoParaIniciarPing {
 
-  
-
     private static String dirrecion;
     private static int numeroDeVeces;
 
@@ -15,10 +13,6 @@ public class ProcesoParaIniciarPing {
 
         pedirDirrecion(scanner);
         pedirLaVecesQueElUsuarioQuiereElPing(scanner);
-    
-     
-        
-        
 
     }
 
@@ -43,33 +37,34 @@ public class ProcesoParaIniciarPing {
 
         } catch (InputMismatchException e) {
             System.err.println("Tiene que introducir un número entero");
-            scanner.next();
 
         }
 
     }
 
     public static void iniciarProceso() throws IOException {
-        ProcessBuilder processBuilder = new ProcessBuilder("java", "Ping",dirrecion);
+        ProcessBuilder processBuilder = new ProcessBuilder("java", "Ping", dirrecion);
         processBuilder.directory(new File("./bin"));
 
         try {
-            Process proceso= processBuilder.start();
-			InputStream inputStream=proceso.getInputStream();
-			int caracterParaLeer=0;
-			while((caracterParaLeer=inputStream.read())!=-1) {
-				System.out.print((char)caracterParaLeer);
-			}
-			inputStream.close();
-			
-			int valorSalida=proceso.waitFor();
-			if(valorSalida!=0) {
-				inputStream=proceso.getErrorStream();
-				while((caracterParaLeer=inputStream.read())!=-1) {
-					System.out.print((char)caracterParaLeer);
-				}
-				inputStream.close();
-			}
+            Process proceso = processBuilder.start();
+            InputStream inputStream = proceso.getInputStream();
+            int caracterParaLeer = 0;
+            while ((caracterParaLeer = inputStream.read()) != -1) {
+                System.out.print((char) caracterParaLeer);
+            }
+            inputStream.close();
+
+            int valorSalida = proceso.waitFor();
+            if (valorSalida != 0) {
+                inputStream = proceso.getErrorStream();
+                while ((caracterParaLeer = inputStream.read()) != -1) {
+                    System.out.print((char) caracterParaLeer);
+                }
+                inputStream.close();
+            } else {
+                System.out.println("El valor de salida es " + valorSalida);
+            }
             proceso.destroy();
         } catch (IOException e) {
             e.printStackTrace();
